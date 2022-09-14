@@ -4,8 +4,9 @@ const users = {
   "marcela_almeida@gmail.com": "abc12345",
   "matheus": "123"
 }
-
+let login = document.getElementById("login")
 let token = Math.random().toString(16).substring(2)
+login.addEventListener("click", logar)
 
 function logar() {
   let email = document.getElementById("email").value;
@@ -15,7 +16,7 @@ function logar() {
 
   if (isUserValid) {
     alert("Usuario autenticado!");
-    window.location.href = "/sucess.html"
+    window.location.href = "/index.html"
     localStorage.setItem('token', token)
   } else {
     alert("Usuário ou senha inválidos!")

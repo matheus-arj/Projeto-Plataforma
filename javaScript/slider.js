@@ -17,9 +17,7 @@ function nextImage() {
 }
 
 function start() {
-    setInterval(() => {
-        nextImage() 
-    }, time)
+    setInterval(nextImage, time)
 }
 
 window.addEventListener("load", start)

@@ -1,6 +1,8 @@
 function checkUser(){
     if(localStorage.getItem('token')){
-      window.location.href = "/sucess.html";
+      window.location.href = "/index.html";
     }
   } 
   checkUser()
+
+  window.onload = checkUser
